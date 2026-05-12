@@ -1,0 +1,24 @@
+/* 1. Remove all default browser margins */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevents the whole browser window from scrolling */
+  background-color: #0F0F16;
+}
+
+/* 2. Override Vite's default #root restrictions */
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: none; /* This kills the empty space on the left/right! */
+  text-align: left;
+}
+
+/* 3. Ensure padding doesn't accidentally expand elements */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
